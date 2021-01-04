@@ -17,11 +17,11 @@ def merge(background, portrait, scale=1):
         for h in range(height2):
             p = portrait.getpixel((w,h))
             if p != (0,0,0):
-                background.putpixel((w+anchor_x-500,h+anchor_y), p)
+                background.putpixel((w+anchor_x-600,h+anchor_y), p)
     background.save('result.png')
 
 
 if __name__ == '__main__':
-    background = Image.open('lab.jpg')
-    portrait = Image.open('portrait.png')
-    merge(background, portrait, 2)
+    background = Image.open('disney.jpg')
+    portrait = Image.open('portrait2.png')
+    merge(background, portrait)
